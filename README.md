@@ -1,5 +1,5 @@
 # elem-mint
-Elem-mint is a simple and easy javascript micro library for manipulating DOM elements. 
+##Elem-mint is an easy to use javascript micro library for DOM elements. 
 === 
 ###Basics
 The main function used in Elem-mint is the $E() function.
