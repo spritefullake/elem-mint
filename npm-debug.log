@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v4.2.1/bin/node',
+1 verbose cli   '/home/ubuntu/.nvm/versions/node/v4.2.1/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/ubuntu/workspace',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/ubuntu/.npm/elem-mint/0.9.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/home/ubuntu/.npm/elem-mint/0.9.1/package.tgz',
+9 verbose tar pack   '/home/ubuntu/workspace' ]
+10 verbose tarball /home/ubuntu/.npm/elem-mint/0.9.1/package.tgz
+11 verbose folder /home/ubuntu/workspace
+12 info prepublish elem-mint@0.9.1
+13 verbose addLocalTarball adding from inside cache /home/ubuntu/.npm/elem-mint/0.9.1/package.tgz
+14 silly cache afterAdd elem-mint@0.9.1
+15 verbose afterAdd /home/ubuntu/.npm/elem-mint/0.9.1/package/package.json not in flight; writing
+16 verbose afterAdd /home/ubuntu/.npm/elem-mint/0.9.1/package/package.json written
+17 silly publish { name: 'elem-mint',
+17 silly publish   version: '0.9.1',
+17 silly publish   description: 'A javascript micro library for creating DOM elements',
+17 silly publish   main: 'Source/index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   author: { name: 'spritefullake', email: '42ahmad@gmail.com' },
+17 silly publish   license: 'MIT',
+17 silly publish   devDependencies: { qunitjs: '^1.20.0' },
+17 silly publish   readme: '# elem-mint\n## Elem-mint is an easy to use javascript micro library for DOM elements. \n\n### Basics\nThe main function used in Elem-mint is the $E() function.\nPass a string to $E() to create an array of element(s).\nThe string can include: **#  .  ,  [  ]**\n\n##### Basically, you can create an element using a css selector.\n````javascript\n$E("div");//returns [div]\n$E("div#mydiv.itsmine.notyours[name=mine]");//returns [div#mydiv.itsmine.notyours] with a name attribute equal to "mine"\n````\n\nUse commas to create multiple elements at once.\n````javascript\n$E("div,p,h1");//returns [div,p,h1]\n````\nUse \'>\' to indicate a parent-child relationship.\n````javascript\n$E("div#parent>div#child");//returns [div#parent,div#child] with div#child being inside of div#parent\n````\n\nUse the render method to add elements to your document.\nRender takes two arguments, a string and a target. The string argument works the same as the argument for $E(), and target argument defaults to document.body if you don\'t supply a target.\n````javascript\n$E.render("div");//renders a div in document.body\n$E.render("div",document.querySelector("#mydiv"));//renders a div in #mydiv\n````\n***\n## Version\nThe latest version is 0.9.1, minor addons may be added, but the core functions aren\'t expected to change.\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   gitHead: 'ae944f6efde278d20ddbb1f3515514842986b5ef',
+17 silly publish   _id: 'elem-mint@0.9.1',
+17 silly publish   _shasum: '7752036146c4f63f58499e5fb15d3b62403f6384',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name elem-mint
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/elem-mint
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /home/ubuntu/.npm/elem-mint/0.9.1/package.tgz
+25 verbose request uri https://registry.npmjs.org/elem-mint
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 5:02:16 PM
+28 verbose request using bearer token for auth
+29 verbose request id 2ad3b370f29c7985
+30 http request PUT https://registry.npmjs.org/elem-mint
+31 http 403 https://registry.npmjs.org/elem-mint
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=60',
+32 verbose headers   'content-length': '95',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Fri, 27 Nov 2015 17:02:22 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-ord1720-ORD',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1448643742.178947,VS0,VE759' }
+33 verbose request invalidating /home/ubuntu/.npm/registry.npmjs.org/elem-mint on PUT
+34 error publish Failed PUT 403
+35 verbose stack Error: "You cannot publish over the previously published version 0.9.1." : elem-mint
+35 verbose stack     at makeError (/home/ubuntu/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/home/ubuntu/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/home/ubuntu/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/home/ubuntu/.nvm/versions/node/v4.2.1/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 403
+37 verbose pkgid elem-mint
+38 verbose cwd /home/ubuntu/workspace
+39 error Linux 4.2.0-c9
+40 error argv "/home/ubuntu/.nvm/versions/node/v4.2.1/bin/node" "/home/ubuntu/.nvm/versions/node/v4.2.1/bin/npm" "publish"
+41 error node v4.2.1
+42 error npm  v2.14.7
+43 error code E403
+44 error "You cannot publish over the previously published version 0.9.1." : elem-mint
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]

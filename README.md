@@ -29,4 +29,4 @@ $E.render("div",document.querySelector("#mydiv"));//renders a div in #mydiv
 ````
 ***
 ## Version
-The latest version is 0.9.1, minor addons may be added, but the core functions aren't expected to change.
+The latest version is 0.9.2, minor addons may be added, but the core functions aren't expected to change.
