@@ -1,8 +1,8 @@
 {
   "name": "elem-mint",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A javascript micro library for creating DOM elements",
-  "main": "index.js",
+  "main": "Source/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
