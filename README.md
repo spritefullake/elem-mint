@@ -3,6 +3,7 @@
 
 ### [npm](https://www.npmjs.com/package/elem-mint)
 
+### [github](https://github.com/spritefullake/elem-mint)
 
 ### About
 Elem-mint is a micro library that makes DOM elements out of strings. Read more [here](http://spritefullake.github.io/elem-mint/)
@@ -50,4 +51,4 @@ $E.render("div",document.querySelector("#mydiv"));//renders a div in #mydiv
 ````
 ***
 ### Version
-The latest version is 0.9.4, minor addons may be added, but the core functions aren't expected to change.
+The latest version is 0.9.5, minor addons may be added, but the core functions aren't expected to change.
