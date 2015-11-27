@@ -1,14 +1,15 @@
 {
   "name": "elem-mint",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "A javascript micro library for creating DOM elements",
   "main": "Source/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo Open up the tests.html file under the Test directory"
   },
   "author": "spritefullake <42ahmad@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "qunitjs": "^1.20.0"
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:spritefullake/elem-mint.git"
   }
 }

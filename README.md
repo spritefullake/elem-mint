@@ -1,14 +1,26 @@
 # elem-mint
 ## Elem-mint is an easy to use javascript micro library for DOM elements. 
 
-###About
-Elem-mint is a micro library meant to help make DOM elements on the fly. Read more [here](http://spritefullake.github.io/elem-mint/)
+### [npm](https://www.npmjs.com/package/elem-mint)
+
+
+### About
+Elem-mint is a micro library that makes DOM elements out of strings. Read more [here](http://spritefullake.github.io/elem-mint/)
+
+### License
+Elem-mint uses the MIT license. Find out more in the LICENSE file of this repo.
 
 ### Installation
 To install, run in a terminal of your choice:
 ````sh
 npm install elem-mint
 ````
+From there, you can either load the index.js in a script tag in an HTML document OR
+
+````javascript
+var $E = require('elem-mint');
+````
+in a js file.
 
 ### Basics
 The main function used in Elem-mint is the $E() function.
@@ -38,4 +50,4 @@ $E.render("div",document.querySelector("#mydiv"));//renders a div in #mydiv
 ````
 ***
 ### Version
-The latest version is 0.9.3, minor addons may be added, but the core functions aren't expected to change.
+The latest version is 0.9.4, minor addons may be added, but the core functions aren't expected to change.
