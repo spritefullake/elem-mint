@@ -1,6 +1,6 @@
 # elem-mint
 ##Elem-mint is an easy to use javascript micro library for DOM elements. 
-=== 
+
 ###Basics
 The main function used in Elem-mint is the $E() function.
 Pass a string to $E() to create an array of element(s).
