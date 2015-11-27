@@ -4,7 +4,7 @@ Elem-mint is a simple and easy javascript micro library for manipulating DOM ele
 ###Basics
 The main function used in Elem-mint is the $E() function.
 Pass a string to $E() to create an array of element(s).
-The string can include: #.,[]
+The string can include: **#  .  ,  [  ]**
 
 #####Basically, you can create an element using a css selector.
 ````javascript
