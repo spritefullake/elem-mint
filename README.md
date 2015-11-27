@@ -1,6 +1,15 @@
 # elem-mint
 ## Elem-mint is an easy to use javascript micro library for DOM elements. 
 
+###About
+Elem-mint is a micro library meant to help make DOM elements on the fly. Read more [here](http://spritefullake.github.io/elem-mint/)
+
+### Installation
+To install, run in a terminal of your choice:
+````sh
+npm install elem-mint
+````
+
 ### Basics
 The main function used in Elem-mint is the $E() function.
 Pass a string to $E() to create an array of element(s).
@@ -28,5 +37,5 @@ $E.render("div");//renders a div in document.body
 $E.render("div",document.querySelector("#mydiv"));//renders a div in #mydiv
 ````
 ***
-## Version
-The latest version is 0.9.2, minor addons may be added, but the core functions aren't expected to change.
+### Version
+The latest version is 0.9.3, minor addons may be added, but the core functions aren't expected to change.
