@@ -1,4 +1,3 @@
-
 var $E = function(str){
     return $E.mint(str);
 };
@@ -94,5 +93,9 @@ $E.render = function(str,target){
   target.appendChild(frag);
 };
 
-module.exports = $E;
-
+if(module.exports != undefined){
+  module.exports = $E;
+}
+else{
+    window.$E = $E;
+}

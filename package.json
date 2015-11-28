@@ -1,8 +1,8 @@
 {
   "name": "elem-mint",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "A javascript micro library for creating DOM elements",
-  "main": "Source/index.js",
+  "main": "src/index.min.js",
   "scripts": {
     "test": "echo Open up the tests.html file under the Test directory"
   },
@@ -11,5 +11,7 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:spritefullake/elem-mint.git"
-  }
+  },
+  "homepage": "http://spritefullake.github.io/elem-mint/",
+  "keywords": ["micro","DOM","online","browser","elements","library","web","frontend"]
 }
