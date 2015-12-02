@@ -51,6 +51,19 @@ wru.test([
         test: function(){
             wru.assert($E("p      ,div,      h1#something.nine    ,  h3").length,4);
         }
+    },
+    {
+        name: "Elements Rendered",
+        setup: function(){
+          $E.render("div#container");
+          $E.render("div#inside","div#container");
+        },
+        test: function(){
+            wru.assert(document.querySelector("div#container").children[0],document.querySelector("div#inside"));
+        },
+        teardown: function(){
+            document.removeChild(document.querySelector("div#container"));
+        }
     }
 ]);
 

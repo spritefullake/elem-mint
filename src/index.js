@@ -85,6 +85,10 @@ $E.mint = function(selectors){//creates elements from css selectors, supports cl
 };
 $E.render = function(str,target){
   target = target || document.body;
+  if(typeof(target) == "string"){
+      target = document.querySelector(target);//if the target is a string
+      //we will be forgiving and querySelector for that element
+  }
   var minted = $E.mint(str);
   var frag = document.createDocumentFragment();//we use a fragment to speed up the appending process
   for(var i = 0,len = minted.length;i<len;i++){

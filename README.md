@@ -31,7 +31,8 @@ in a js file.
 ### Basics
 The main function used in Elem-mint is the $E() function.
 Pass a string to $E() to create an array of element(s).
-The string can include: **#  .  ,  [  ]**
+The string can include: 
+#### **#  .  ,  [  ] >**
 
 ##### Basically, you can create an element using a css selector.
 ````javascript
@@ -52,8 +53,8 @@ Use the render method to add elements to your document.
 Render takes two arguments, a string and a target. The string argument works the same as the argument for $E(), and target argument defaults to document.body if you don't supply a target.
 ````javascript
 $E.render("div");//renders a div in document.body
-$E.render("div",document.querySelector("#mydiv"));//renders a div in #mydiv
+$E.render("div","#mydiv");//renders a div in #mydiv
 ````
 ***
 ### Version
-The latest version is 0.9.7, minor addons may be added, but the core functions aren't expected to change.
+The latest version is 0.9.8, minor addons may be added, but the core functions aren't expected to change.
