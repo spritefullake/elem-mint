@@ -55,14 +55,13 @@ wru.test([
     {
         name: "Elements Rendered",
         setup: function(){
-          $E.render("div#container");
-          $E.render("div#inside","div#container");
+          $E.render("div#containerd>div#inside");
         },
         test: function(){
-            wru.assert(document.querySelector("div#container").children[0],document.querySelector("div#inside"));
+            wru.assert(document.querySelector("div#containerd").children[0],document.querySelector("div#inside"));
         },
         teardown: function(){
-            document.removeChild(document.querySelector("div#container"));
+            document.removeChild(document.querySelector("div#containerd"));
         }
     }
 ]);

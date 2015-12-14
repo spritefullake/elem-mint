@@ -57,4 +57,4 @@ $E.render("div","#mydiv");//renders a div in #mydiv
 ````
 ***
 ### Version
-The latest version is 0.9.8, minor addons may be added, but the core functions aren't expected to change.
+The latest version is 0.9.9, minor addons may be added, but the core functions aren't expected to change.

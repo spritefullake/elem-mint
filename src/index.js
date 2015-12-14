@@ -92,7 +92,12 @@ $E.render = function(str,target){
   var minted = $E.mint(str);
   var frag = document.createDocumentFragment();//we use a fragment to speed up the appending process
   for(var i = 0,len = minted.length;i<len;i++){
-      frag.appendChild(minted[i]);
+      if(minted.indexOf(minted[i].parentNode) > -1){
+        continue;//do not render elements inside another twice
+      }
+      else{
+        frag.appendChild(minted[i]);
+      }
   }
   target.appendChild(frag);
 };
