@@ -1,6 +1,6 @@
 {
   "name": "elem-mint",
-  "version": "0.9.9",
+  "version": "1.0.0",
   "description": "A javascript micro library for creating DOM elements",
   "main": "src/index.min.js",
   "scripts": {
