@@ -24,12 +24,55 @@ $E.mint = function(selectors){//creates elements from css selectors, supports cl
         var tag;
         var elem;
         
+        portion = portion.replace(/\+/g,"[samelevelchildas=true],");//enables the '+' syntax that lets you 
+            //insert multiple elements into the same parent
+            //enables the '::' syntax that brings the elements following it up one level
+        var levelUp = function(){
+            var start = portion.indexOf(":");
+            var trimmed = portion.replace(":","!");//replace first colon with a char that won't be picked up
+            var end = trimmed.indexOf(":");//by indexOf 
+            var num =  end-start>1 ? parseInt(portion.slice(start+1,end)) : 1;
+            portion = portion.replace(":",("[nextstepsupalevel="+num+"]"));
+            if(num == 1){
+                num = "";
+            }
+            portion = portion.replace(((num).toString()+":"),",");
+        }
+        while(portion.search(/:/) >= 0){
+            levelUp();
+        }
+        
         if(portion.indexOf(">") >= 0){
-            var nested = portion.replace(">",",");
+            
+            var nested = portion.replace(">",",")
             var arr = $E.mint(nested);
             arr = [].concat.apply([],arr);
+            var jumpCount = 0;//by keeping track of the jumps via '::', we can prevent
+            //an element from being moved from place to place when we reach the else condition
+            //of the samelevelchildas checking block
             arr.reduce(function(prev,cur,ind,ar){
-                prev.appendChild(cur);
+                
+                if(parseInt(prev.getAttribute("nextstepsupalevel")) > 0){
+                    var tempParent = prev.parentNode;
+                    
+                    for(var i = 0,len = parseInt(prev.getAttribute("nextstepsupalevel"));i<len;i++){
+                        tempParent = tempParent.parentNode;
+                    }
+
+                    prev.removeAttribute("nextstepsupalevel");
+                    tempParent.appendChild(cur);
+                    jumpCount++;
+                }
+                
+                if(prev.getAttribute("samelevelchildas") == "true"){
+                  prev.parentNode.appendChild(cur);
+                  prev.removeAttribute("samelevelchildas");
+                }
+                else if(jumpCount == 0){
+                  prev.appendChild(cur);
+                }
+                jumpCount = 0;//set jumpcount to 0 because we have made it past the condition we wished
+                //to avoid
                 return cur;
             });
             for(var l = 0,lenl = arr.length;l<lenl;l++){

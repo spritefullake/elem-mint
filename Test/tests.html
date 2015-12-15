@@ -53,15 +53,26 @@ wru.test([
         }
     },
     {
-        name: "Elements Rendered",
+        name: "Plus Check",
         setup: function(){
-          $E.render("div#containerd>div#inside");
+             this.cat = $E("div.parent>p+p.red+p.green");
         },
         test: function(){
-            wru.assert(document.querySelector("div#containerd").children[0],document.querySelector("div#inside"));
+            wru.assert(this.cat[0].children.length,3);
+        }
+    },
+    {
+        name: "Colon Check",
+        setup: function(){
+            $E.render("div.first>div.person>div.fire>div.water>div.earth:3:div.air");
+            this.cat = document.querySelector("div.first");
+            this.dog = document.querySelector("div.air");
+        },
+        test: function(){
+            wru.assert(this.cat.children[1],this.dog);
         },
         teardown: function(){
-            document.removeChild(document.querySelector("div#containerd"));
+            document.body.removeChild(this.cat);
         }
     }
 ]);
