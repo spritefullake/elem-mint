@@ -70,4 +70,4 @@ $E.render("div","#mydiv");//renders a div in #mydiv
 ````
 ***
 ### Version
-The latest version is 1.1.2. Stay updated in case any new additions are made!
+The latest version is 1.1.4. Stay updated in case any new additions are made!

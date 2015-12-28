@@ -1,4 +1,4 @@
-var $E = function(str){
+module.exports = exports = $E = function(str){
     return $E.mint(str);
 };
 $E.removeSection = function(str,from,to){
@@ -144,10 +144,4 @@ $E.render = function(str,target){
   }
   target.appendChild(frag);
 };
-
-if(module.exports != undefined){
-  module.exports = $E;
-}
-else{
-    window.$E = $E;
-}
+window.$E = $E;
